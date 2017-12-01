@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>四则运算</title>
+    <link href="bootstrap.css" rel="stylesheet">
+  </head>
+  <body>
+    <div>
+      <select id="dropdown">
+        <option value="0" selected>选择</option>
+        <option value="1">20以内的加减法(不包括加起来等于10、加减1、加2)</option>
+        <option value="2">20以内的进位加法</option>
+        <option value="3">20以内的加减法，允许输入在等号左边，不包括相差小于1的</option>
+        <option value="4">100以内的加减法</option>
+      </select>
+    </div>
+    <div id="resultTable"></div>      
+    <script id="entry-template" type="text/x-handlebars-template">
+      <table class="table">
+        <tbody>
+          {{#each this}}
+          <tr>
+            {{#each this}}
+            <td>
+              {{this}}
+            </td>
+            {{/each}}
+          </tr>
+          {{/each}}
+        </tbody>
+      </table>
+    </script>
+    <script src="jquery.js"></script>
+    <script src="handlebars.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
